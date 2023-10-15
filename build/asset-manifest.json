@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.7d779cdf.css",
+    "main.js": "./static/js/main.41312b6f.js",
+    "static/media/taktourandaz.jpg": "./static/media/taktourandaz.a7588401d24ffb5913f4.jpg",
+    "static/media/avatar.jpg": "./static/media/avatar.95b8d810165fadd6c072.jpg",
+    "index.html": "./index.html",
+    "main.7d779cdf.css.map": "./static/css/main.7d779cdf.css.map",
+    "main.41312b6f.js.map": "./static/js/main.41312b6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d779cdf.css",
+    "static/js/main.41312b6f.js"
+  ]
+}
