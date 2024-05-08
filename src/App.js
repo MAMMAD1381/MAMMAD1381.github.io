@@ -12,7 +12,6 @@ import Courses from './components/Courses'
 import Projects from './components/Projects/Projects'
 
 function App() {
-  const [req, setReq] = useState({})
   const [repos, setRepos] = useState([])
   const getRequest = async () => {
     const { data } = await axios.get('https://api.github.com/users/MAMMAD1381/repos')
