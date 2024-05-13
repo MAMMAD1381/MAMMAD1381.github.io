@@ -16,11 +16,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import MenuItem from './MenuItem'
 import MenuItemDrop from './MenuItemDrop'
-import AboutMe from '../AboutMe'
-import avatar from '../.././images/avatar.jpg'
+import avatar from '../.././images/AboutMe/avatar.jpg'
 import SocialLinks from '../SocialLinks/SocialLinks'
 
-export default function Menu({ content }) {
+export default function Menu({ content, configs }) {
   return (
     <>
       <div id="sidebar" className="container-fluid w-100">
@@ -41,7 +40,7 @@ export default function Menu({ content }) {
                   <p className="text-muted">
                     <span className="badge bg-primary">Backend Developer</span>
                   </p>
-                  <SocialLinks/>
+                  <SocialLinks configs={configs}/>
                 </>
 
                 <MenuItem name={'About me'} section={'about'} icon={{ icon: faUser, size: 'xl' }} />

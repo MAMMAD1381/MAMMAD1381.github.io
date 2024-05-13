@@ -1,21 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import avatar from '.././images/avatar.jpg'
+import avatar from '.././images/AboutMe/avatar.jpg'
 import { faBaby } from '@fortawesome/free-solid-svg-icons'
 import { faTelegram, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 import SocialLinks from './SocialLinks/SocialLinks'
 import ProfilePoints from './ProfilePoints/ProfilePoints'
-export default function AboutMe() {
+export default function AboutMe({configs}) {
+  console.log('here', configs)
   const points1 = [
-    { key: 'Name:', value: 'Mohammad Mohammadina' },
-    { key: 'Birthday:', value: '29 May 2002' },
-    { key: 'Website:', value: 'https://mammad1381.github.io' },
-    { key: 'Phone:', value: '+98 990 890 6984' },
+    { key: 'Name:', value: configs.Name},
+    { key: 'Birthday:', value: configs.Birthday },
+    { key: 'Website:', value: configs.Website },
+    { key: 'Phone:', value: configs.Phone },
   ]
   const points2 = [
-    { key: 'Age:', value: '21' },
-    { key: 'Degree:', value: 'Bachelor Degree (ongoing)' },
-    { key: 'Gmail:', value: 'mohammad.m6984@gmail.com' },
-    { key: 'City:', value: 'Mashhad, Razavi Khorasan Province' },
+    { key: 'Age:', value: configs.Age },
+    { key: 'Degree:', value: configs.Degree },
+    { key: 'Gmail:', value: configs.Gmail },
+    { key: 'City:', value: configs.City },
   ]
 
   return (
@@ -28,14 +29,14 @@ export default function AboutMe() {
           <div className="row">
             <div className="col-lg-4 flex-row justify-content-between" data-aos="fade-right">
               <img src={avatar} className="img-fluid" alt="" />
-              <SocialLinks />
+              {configs && <SocialLinks configs={configs} />}
+              {/* <SocialLinks  /> */}
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
               <h3>Backend &amp; Web Developer.</h3>
-              <p className="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </p>
+              <br></br>
+              <br></br>
+              <br></br>
               <div className="row">
                 <div className="col-lg-6">
                   <ProfilePoints points={points1} />
