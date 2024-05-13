@@ -9,14 +9,11 @@ import TecknicalSkills from './components/TecknicalSkills'
 import SoftSkills from './components/SoftSkills'
 import Courses from './components/Courses'
 import Projects from './components/Projects/Projects'
-import logo from './images/Courses/taktourandaz/logo.jpg'
-import certificate from './images/Courses/taktourandaz/Certificate.jpg'
 import { loadConfigs } from './utils/loadConfigs'
 
 function App() {
   const [configs, setConfigs] = useState({})
   useEffect(() => {
-    // loadConfigs((configs) => setConfigs(configs))
     loadConfigs(async (configs) => {
       setConfigs(configs);
     }).catch((error) => {
@@ -31,7 +28,7 @@ function App() {
         content={
           <>
             <Entry />
-            {configs.aboutMe && <AboutMe configs={configs.aboutMe}/>}
+            {configs.aboutMe && <AboutMe profile={configs.aboutMe}/>}
             <br></br>
             {configs && <Education educations={configs.educations}/>}
             <br></br>
@@ -39,14 +36,6 @@ function App() {
             <br></br>
             {configs && <SoftSkills softSkills={configs.softSkills}/>}
             <br></br>
-            <Courses courses={[{
-              name: 'PartSoftware Group, TakTour Andaz',
-              description: 'CCNA courses which was heled in part software group',
-              date: '2022-2023',
-              logo: logo,
-              image: certificate,
-              url: 'https://partsoftware.com/college/'
-            }]} />
             {configs && <Courses courses={configs.courses} />}
             <br></br>
             {configs.repos && <Projects projects={configs.repos}/>}

@@ -3,7 +3,6 @@ import Point from './ProfilePoints/Point';
 import { domainExtractor } from '../utils/domainExtractor';
 
 export default function Courses({ courses }) {
-  console.log(courses)
   return (
     <>
       <section id="courses" className="about bg-light">

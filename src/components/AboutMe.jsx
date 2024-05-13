@@ -1,22 +1,17 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import avatar from '.././images/AboutMe/avatar.jpg'
-import { faBaby } from '@fortawesome/free-solid-svg-icons'
-import { faTelegram, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 import SocialLinks from './SocialLinks/SocialLinks'
 import ProfilePoints from './ProfilePoints/ProfilePoints'
-export default function AboutMe({configs}) {
-  console.log('here', configs)
+export default function AboutMe({profile}) {
   const points1 = [
-    { key: 'Name:', value: configs.Name},
-    { key: 'Birthday:', value: configs.Birthday },
-    { key: 'Website:', value: configs.Website },
-    { key: 'Phone:', value: configs.Phone },
+    { key: 'Name:', value: profile.Name},
+    { key: 'Birthday:', value: profile.Birthday },
+    { key: 'Website:', value: profile.Website },
+    { key: 'Phone:', value: profile.Phone },
   ]
   const points2 = [
-    { key: 'Age:', value: configs.Age },
-    { key: 'Degree:', value: configs.Degree },
-    { key: 'Gmail:', value: configs.Gmail },
-    { key: 'City:', value: configs.City },
+    { key: 'Age:', value: profile.Age },
+    { key: 'Degree:', value: profile.Degree },
+    { key: 'Gmail:', value: profile.Gmail },
+    { key: 'City:', value: profile.City },
   ]
 
   return (
@@ -28,9 +23,8 @@ export default function AboutMe({configs}) {
           </div>
           <div className="row">
             <div className="col-lg-4 flex-row justify-content-between" data-aos="fade-right">
-              <img src={avatar} className="img-fluid" alt="" />
-              {configs && <SocialLinks configs={configs} />}
-              {/* <SocialLinks  /> */}
+              <img src={profile.Avatar} className="img-fluid" alt="" />
+              {profile && <SocialLinks profile={profile} />}
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
               <h3>Backend &amp; Web Developer.</h3>
@@ -46,10 +40,7 @@ export default function AboutMe({configs}) {
                 </div>
               </div>
               <p>
-                i’m Mohammad Mohammadian a forth year university, more than three years of
-                programming experience with different programming languages such as java-script,
-                java, c and Databases like Mongo-DB and MY-SQL. i’m intrested in learning backend
-                with node-js and i have more than one year experience with node-js and javascript
+                {profile.Introduction}
               </p>
             </div>
           </div>
