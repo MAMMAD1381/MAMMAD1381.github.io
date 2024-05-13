@@ -1,0 +1,24 @@
+const technicalSkills = {
+  proficient: [
+    "JavaScript",
+    "Node.js/Express",
+    "HTML/CSS",
+    "C",
+    "Java",
+    "OOP",
+    "Linux/bash",
+    "Git",
+    "Python"
+  ],
+  familiar: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Bootstrap",
+    "CCNA",
+    "MongoDB",
+    "MySQL"
+  ]
+};
+
+export default technicalSkills;

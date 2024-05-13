@@ -1,8 +1,8 @@
-import aboutMe from "../configs/AboutMe.json";
-import courses from "../configs/Courses.json";
-import educations from "../configs/Educations.json";
-import softSkills from "../configs/SoftSkills.json";
-import tecknicalSkills from "../configs/TecknicalSkills.json";
+import aboutMe from "../configs/AboutMe";
+import courses from "../configs/Courses";
+import educations from "../configs/Educations";
+import softSkills from "../configs/SoftSkills";
+import tecknicalSkills from "../configs/TecknicalSkills";
 import axios from 'axios'
 
 

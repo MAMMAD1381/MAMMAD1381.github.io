@@ -1,5 +1,5 @@
-{
-  "personal": [
+const softSkills = {
+  personal: [
     "Hardwork",
     "Responsibility",
     "Problem Solving",
@@ -7,8 +7,10 @@
     "Fast Learning",
     "Time Management"
   ],
-  "social": [
+  social: [
     "Leadership",
     "Team Working"
   ]
-}
+};
+
+export default softSkills;
