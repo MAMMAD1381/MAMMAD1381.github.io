@@ -1,55 +1,37 @@
-import React, { useState } from 'react';
-import { saveAs } from 'file-saver';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+import React from 'react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import ResumePDF from './ResumePDF';
 
-function ResumeGenerator() {
-  const [resumeHTML, setResumeHTML] = useState('');
-
-  const generateResume = () => {
-    // Fetch data from an API or predefined JSON object
-    const data = {
+class ResumeGenerator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Personal and professional information
       name: 'John Doe',
-      projects: ['Project 1', 'Project 2'],
-      profile: 'Full-stack Developer',
-      // Add more data fields as needed
+      email: 'john@example.com',
+      phone: '123-456-7890',
+      education: 'Bachelor of Science in Computer Science',
+      university: 'University of Example',
+      graduation: 'May 2022',
+      experience: 'Software Developer Intern',
+      company: 'XYZ Company',
+      dates: 'May 2021 - August 2021'
     };
-  
-    // Define JSX template for resume content
-    const resumeContent = (
+  }
+
+  render() {
+    return (
       <div>
-        <h1>{data.name}</h1>
-        <h2>{data.profile}</h2>
-        <h3>Projects:</h3>
-        <ul>
-          {data.projects.map(project => <li key={project}>{project}</li>)}
-        </ul>
-        {/* Add more sections as needed */}
+        {/* Your resume component */}
+        <ResumePDF {...this.state} />
+
+        {/* Button to trigger PDF generation */}
+        <PDFDownloadLink document={<ResumePDF {...this.state} />} fileName="resume.pdf">
+          {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download PDF')}
+        </PDFDownloadLink>
       </div>
     );
-  
-    // Set the JSX template as resume HTML
-    setResumeHTML(resumeContent);
-  };
-  
-
-  const downloadPDF = () => {
-    // Convert HTML to canvas
-    html2canvas(document.querySelector('#resume')).then(canvas => {
-      // Convert canvas to PDF
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-      pdf.save('resume.pdf');
-    });
-  };
-
-  return (
-    <div>
-      <button onClick={generateResume}>Generate Resume</button>
-      <button onClick={downloadPDF}>Download PDF</button>
-      <div id="resume" dangerouslySetInnerHTML={{ __html: resumeHTML }} />
-    </div>
-  );
+  }
 }
 
 export default ResumeGenerator;
