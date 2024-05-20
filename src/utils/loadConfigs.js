@@ -10,16 +10,16 @@ export async function loadConfigs(callback) {
   try {
     let repos = []
     try{
-      // const { data } = await axios.get('https://api.github.com/users/MAMMAD1381/repos')
-      // repos = data.map((item) =>{
-      //   return {
-      //     title: item.name,
-      //     url: item.html_url,
-      //     tags: item.topics,
-      //     desc: item.description,
-      //     createdAt: item.created_at,
-      //   }
-      // })
+      const { data } = await axios.get('https://api.github.com/users/MAMMAD1381/repos')
+      repos = data.map((item) =>{
+        return {
+          title: item.name,
+          url: item.html_url,
+          tags: item.topics,
+          desc: item.description,
+          createdAt: item.created_at,
+        }
+      })
       
     }
     catch(err){console.error(err)}

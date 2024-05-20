@@ -1,21 +1,12 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faAt,
-  faBars,
-  faBrain,
   faChalkboardTeacher,
   faCogs,
-  faCommentAlt,
   faComments,
-  faCommentsDollar,
-  faGear,
   faGraduationCap,
   faLaptopCode,
   faUser,
-  faWindowClose,
 } from '@fortawesome/free-solid-svg-icons'
 import MenuItem from './MenuItem'
-import MenuItemDrop from './MenuItemDrop'
 import avatar from '../.././images/AboutMe/avatar.jpg'
 import SocialLinks from '../SocialLinks/SocialLinks'
 
@@ -77,7 +68,7 @@ export default function Menu({ content, configs }) {
               </ul>
             </div>
           </div>
-          <div className="col-sm p-3 min-vh-100">{content /* content */}</div>
+          <div className="col-sm p-3 min-vh-100">{content }</div>
         </div>
       </div>
     </>

@@ -10,7 +10,6 @@ import SoftSkills from './components/SoftSkills'
 import Courses from './components/Courses'
 import Projects from './components/Projects/Projects'
 import { loadConfigs } from './utils/loadConfigs'
-import ResumeGenerator from './components/test'
 
 function App() {
   const [configs, setConfigs] = useState({})
@@ -28,7 +27,6 @@ function App() {
       {configs && <Menu
         content={
           <>
-            <ResumeGenerator />
             <Entry />
             {configs.aboutMe && <AboutMe profile={configs.aboutMe}/>}
             <br></br>
