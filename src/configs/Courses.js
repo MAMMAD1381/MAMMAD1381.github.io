@@ -5,7 +5,7 @@ const courses = [
   {
     name: "PartSoftware Group, TakTour Andaz",
     description: "CCNA courses which was held in part software group",
-    date: "2022-2023",
+    date: "1402/02/13 - 1402/04/07",
     logo: taktourandazLogo,
     image: taktourandazImage,
     url: "https://partsoftware.com/college/"

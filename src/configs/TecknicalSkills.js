@@ -1,14 +1,14 @@
 const technicalSkills = {
   proficient: [
     "JavaScript",
-    "Node.js/Express",
+    "Python",
+    "Node.js",
     "HTML/CSS",
     "C",
     "Java",
     "OOP",
     "Linux/bash",
     "Git",
-    "Python"
   ],
   familiar: [
     "TypeScript",

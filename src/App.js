@@ -9,6 +9,7 @@ import TecknicalSkills from './components/TecknicalSkills'
 import SoftSkills from './components/SoftSkills'
 import Courses from './components/Courses'
 import Projects from './components/Projects/Projects'
+import Job from './components/Job'
 import { loadConfigs } from './utils/loadConfigs'
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
             {configs.aboutMe && <AboutMe profile={configs.aboutMe}/>}
             <br></br>
             {configs && <Education educations={configs.educations}/>}
+            <br></br>
+            {configs && <Job jobs={configs.jobs}/>}
             <br></br>
             {configs && <TecknicalSkills tecknicalSkills={configs.tecknicalSkills}/>}
             <br></br>
