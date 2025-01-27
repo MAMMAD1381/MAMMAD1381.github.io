@@ -29,7 +29,7 @@ export default function Menu({ content, configs }) {
                     <strong className='text-light'>Mohammad mohammadian</strong>
                   </h5>
                   <p className="text-muted">
-                    <span className="badge bg-primary">Backend Developer</span>
+                    <span className="badge bg-primary">{configs.JobTitle}</span>
                   </p>
                   <SocialLinks configs={configs}/>
                 </>

@@ -25,10 +25,11 @@ function App() {
   return (
     <>
       <Background />
-      {configs && <Menu
+      {configs.aboutMe && <Menu
         content={
           <>
-            <Entry />
+            {configs.aboutMe && <Entry profile={configs.aboutMe}/>}
+            {/* <Entry /> */}
             {configs.aboutMe && <AboutMe profile={configs.aboutMe}/>}
             <br></br>
             {configs && <Education educations={configs.educations}/>}

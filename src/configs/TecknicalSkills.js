@@ -3,21 +3,17 @@ const technicalSkills = {
     "JavaScript",
     "Python",
     "Node.js",
-    "HTML/CSS",
     "C",
     "Java",
-    "OOP",
     "Linux/bash",
     "Git",
+    "MongoDB",
+    "MySQL",
+    "Redis",
+    "Docker"
   ],
   familiar: [
-    "TypeScript",
     "React",
-    "Next.js",
-    "Bootstrap",
-    "CCNA",
-    "MongoDB",
-    "MySQL"
   ]
 };
 

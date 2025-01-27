@@ -27,7 +27,7 @@ export default function AboutMe({profile}) {
               {profile && <SocialLinks profile={profile} />}
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>Backend &amp; Web Developer.</h3>
+              <h3>{profile.JobTitle}.</h3>
               <br></br>
               <br></br>
               <br></br>

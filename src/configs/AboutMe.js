@@ -1,16 +1,17 @@
 import avatarImage from '../images/AboutMe/avatar.jpg';
 
 const profile = {
-  Name: "Mohammad Mohammadina",
+  Name: "Mohammad Mohammadian",
   Avatar: avatarImage,
   Birthday: "29 May 2002",
   Website: "https://mammad1381.github.io",
+  JobTitle: 'Junior DataScientist',
   Phone: "+98 990 890 6984",
-  Age: 22,
+  Age: 23,
   Degree: "Bachelor Degree (ongoing)",
   Gmail: "mohammad.m6984@gmail.com",
   City: "Mashhad, Razavi Khorasan Province",
-  Introduction: "i’m Mohammad Mohammadian a forth year university, more than three years of programming experience with different programming languages such as java-script, java, c and Databases like Mongo-DB and Redis. which it contains one year of backend development with node-js, including 4 month of career in PartSoftware group as backend developer. i’m intrested in learning data science and machine learning and i have started it path about couple of months until now.",
+  Introduction:   "I am Mohammad Mohammadian, a final-year Computer Engineering student at the Ferdowsi University of Mashhad. With over four years of programming experience, I am skilled in Python, JavaScript, Java, and C, along with experience working with databases such as MySQL, MongoDB, and Redis. I also have 6 months of experience as a backend developer at Part Software Group, where I developed efficient and scalable systems. Additionally, I successfully completed a CCNA course at Part Software Group, which strengthened my understanding of networking technologies.\n Over the past year, I have been actively working on AI-related projects, focusing on areas such as machine learning, deep learning, and natural language processing (NLP). Alongside this, I have been self-studying advanced AI concepts and techniques to expand my expertise in this field. I am passionate to expand my skills. This curiosity has driven me to build a diverse skill set and the confidence to tackle new challenges.",
   github: "https://github.com/MAMMAD1381",
   linkedin: "https://www.linkedin.com/in/mohammad-mohammdian-512655257/",
   telegram: "https://t.me/sid_the_lord_of_fire",
